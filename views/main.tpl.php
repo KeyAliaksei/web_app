@@ -15,7 +15,7 @@
 
     <main>
         <div class="row">
-            <img src="../images/1.jpg" class="img-fluid" alt="1.jpg">
+            <img src="/web_app/images/1.jpg" class="img-fluid" alt="1.jpg">
         </div>
     </main>
 
