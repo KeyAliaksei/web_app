@@ -1,11 +1,12 @@
 <header>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 mb-4 border-bottom bg-primary rounded">
-        <a href="#" class="d-flex align-items-center">
+        <a href="/web_app/index" class="d-flex align-items-center">
             <img class="me-3" src="/web_app/images/logo.svg" alt="logo" width="80" height="70">
         </a>
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2 text-light text-decoration-none" href="#">Login</a>
-            <a class="py-2 text-light text-decoration-none" href="#">Sign up</a>
+            <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/login">Login</a>
+            <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/registration">Sign up</a>
+            <a class="me-3 py-2 text-light text-decoration-none" href="#">Admin</a>
         </nav>
     </div>
 

@@ -2,20 +2,16 @@
     <div class="row bg-white">
         <div class="col rounded p-4">
             <h3 class="text-center mb-4">Login</h3>
-            <form method="post" id="formLog" name="formLog">
+            <form id="login" name="login">
                 <div class="form-group">
                     <label for="inputLogin">Login</label>
-                    <input type="text" class="form-control" id="inputLogin">
+                    <input type="text" class="form-control" id="inputLogin" required>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" id="exampleInputPassword1" required>
                 </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                </div>
-                <button type="submit" class="btn btn-danger w-100">Login</button>
+                <button type="submit" class="btn btn-danger w-100 mt-3">Login</button>
             </form>
         </div>
     </div>

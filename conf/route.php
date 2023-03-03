@@ -2,9 +2,10 @@
 
 /**
  *  Routing class
- * http://localhost:8888/web_app/home
- * http://localhost:8888/web_app/home/user
- * http://localhost:8888/web_app/home/admin
+ * http://localhost:8888/web_app/main
+ * http://localhost:8888/web_app/main/login/account
+ * http://localhost:8888/web_app/main/signup/account
+ * http://localhost:8888/web_app/main/adminLogin/accountAdmin - canceled
  */
 
 class Routing {
@@ -27,8 +28,8 @@ class Routing {
         include CONTROLLER_PATH . $controllerName . ".php";
         include MODEL_PATH . $modelName . ".php";
 
-        if (isset($route[2]) && $route[2] !='') {
-            $action = $route[2];
+        if (isset($route[3]) && $route[3] !='') {
+            $action = $route[3];
         }
 
         $controller = new $controllerName();

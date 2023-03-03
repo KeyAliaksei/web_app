@@ -17,7 +17,7 @@ class DB {
         $db   = self::DB;
         $port = self::PORT;
 
-        $conn = new PDO("mysql:dbname=$db;host=$host;port=$port", $user, $pass);
+        $conn = new PDO("mysql:dbname=$db;host=$host;port=$port;charset=UTF8", $user, $pass);
         return $conn;
     }
 }

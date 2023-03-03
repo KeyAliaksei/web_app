@@ -1,9 +1,3 @@
-
-<?php
-/**
-* @var $pageData
-*/
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,16 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/web_app/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <title><?= $pageData['title']; ?></title>
+    <title>Sign_up_page</title>
 </head>
 <body>
 <div class="container py-2">
     <?php require "blocks/header.php" ?>
 
-    <main>
-        <div class="row">
-            <img src="/web_app/images/1.jpg" class="img-fluid" alt="1.jpg">
+    <main class="container">
+        <div class="my-3 p-3 bg-body rounded shadow-sm justify-content-center">
+            <?php require "blocks/registrationForm.php" ?>
         </div>
+
     </main>
 
     <?php require "blocks/footer.php" ?>

@@ -1,10 +1,10 @@
 <header>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 mb-4 border-bottom bg-primary rounded">
-        <a href="home.php" class="d-flex align-items-center">
+        <a href="/web_app/index" class="d-flex align-items-center">
             <img class="me-3" src="/web_app/images/logo.svg" alt="logo" width="80" height="70">
         </a>
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2 text-light text-decoration-none" href="#">Log Out</a>
+            <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/index">Log Out</a>
         </nav>
     </div>
 
