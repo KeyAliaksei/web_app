@@ -2,10 +2,10 @@
 
 /**
  *  Routing class
- * http://localhost:8888/web_app/main
- * http://localhost:8888/web_app/main/login/account
- * http://localhost:8888/web_app/main/signup/account
- * http://localhost:8888/web_app/main/adminLogin/accountAdmin - canceled
+ * http://localhost:8888/web_app/index
+ * http://localhost:8888/web_app/index/login/account
+ * http://localhost:8888/web_app/index/signup/account
+ * http://localhost:8888/web_app/admin/login/account - temporarily canceled
  */
 
 class Routing {

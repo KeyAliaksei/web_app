@@ -26,7 +26,7 @@
                     <textarea class="form-control" id="productDescription" rows="3"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-danger w-100 mt-2">Sign up</button>
+                <button type="submit" class="btn btn-danger w-100 mt-2">Send request</button>
 
             </form>
         </div>

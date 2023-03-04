@@ -8,8 +8,8 @@
                     <input type="text" class="form-control" id="inputLogin" required>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" required>
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" required>
                 </div>
                 <button type="submit" class="btn btn-danger w-100 mt-3">Login</button>
             </form>
