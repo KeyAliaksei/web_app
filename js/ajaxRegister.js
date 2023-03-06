@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
-                console.log(xhr.status); //если статус 200
-                console.log(xhr.responseText); //
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+                window.location.href="/web_app/account";
             }};
 
         let data = {

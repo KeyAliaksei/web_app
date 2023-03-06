@@ -1,8 +1,22 @@
+<?php
+/**
+ * @var $pageData
+ */
+?>
+<?php
+    print_r($pageData);
+?>
+
 <div class="container-fluid d-flex h-100 justify-content-center align-items-center p-0">
     <div class="row bg-white">
         <div class="col rounded p-4">
             <h3 class="text-center mb-4">Login</h3>
             <form id="login" name="login">
+
+                <?php if(!empty($pageData['error'])) :?>
+                    <p><?= $pageData['error']; ?></p>
+                <?php endif; ?>
+
                 <div class="form-group">
                     <label for="inputLogin">Login</label>
                     <input type="text" class="form-control" id="inputLogin" required>

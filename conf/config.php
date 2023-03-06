@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 define("ROOT", $_SERVER['DOCUMENT_ROOT']. "/web_app");
 define("CONTROLLER_PATH", ROOT. "/controllers/");

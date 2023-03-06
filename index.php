@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 $_POST = json_decode(file_get_contents("php://input"), true);
 
 error_reporting(E_ALL);

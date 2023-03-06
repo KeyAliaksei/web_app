@@ -12,6 +12,9 @@ class RegistrationController extends Controller {
     }
 
     public function index() {
+        if(!empty($_SESSION['user'])) {
+            header("Location: /web_app/");
+        }
         $this->pageData['title'] = " Registration page";
         if(!empty($_POST)){
             if($this->register()) {
@@ -33,9 +36,8 @@ class RegistrationController extends Controller {
             $this->model->registerNewUser($regName, $regSurname, $regEmail, $regLogin, $regPassword);
             return true;
         } else {
-            var_dump($_POST);
-//            $this->pageData['registerMsg'] = "Fill all required fields";
-//            return false;
+            $this->pageData['registerMsg'] = "Fill all required fields";
+            return false;
         }
     }
 
