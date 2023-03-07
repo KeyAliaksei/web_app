@@ -16,13 +16,7 @@ class LoginController extends Controller {
             header("Location: /web_app/");
         }
 
-
         $this->pageData['title'] = "Login page";
-        if(!empty($_POST)) {
-            if(!$this->auth()) {
-                $this->pageData['error'] = "Uncorrected login or password!";
-            }
-        }
         $this->view->render($this->pageTpl, $this->pageData);
     }
 
@@ -33,15 +27,10 @@ class LoginController extends Controller {
             if($this->model->checkUser($login, $password)) {
                 $_SESSION['user'] = $_POST['inputLogin'];
                 echo json_encode(['error'=>false]);
-                exit();
             } else {
-                echo json_encode(['error'=>true]);
-                exit();
+                echo json_encode(['error'=>true, 'message'=>'Incorrect login or password!']);
             }
-        } else {
-            echo json_encode(['error'=>true]);
             exit();
         }
     }
-
 }

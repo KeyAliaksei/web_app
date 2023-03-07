@@ -8,12 +8,6 @@
         <div class="col rounded p-4">
             <h3 class="text-center mb-4">Sign up</h3>
             <form id="formReg" name="formReg">
-
-                <?php
-                if(!empty($pageData['registerMsg'])) :?>
-                <p><?= $pageData['registerMsg']; ?></p>
-                <?php endif; ?>
-
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" class="form-control" id="name" placeholder="A-Z, a-z" required>

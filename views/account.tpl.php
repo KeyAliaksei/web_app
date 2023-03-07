@@ -58,7 +58,7 @@
 
                 <h4>Products</h4>
                 <?php foreach ($pageData['products'] as $key => $value) {
-                    echo "&nbsp;id:&nbsp;" . $value['id'] . "&nbsp;name&nbsp;" . $value['name'] . "&nbsp;quantity:&nbsp;" . $value['quantity'] . "&nbsp;description:&nbsp;" . $value['description'] . "&nbsp;created:&nbsp;" . $value['created'] . "<br>";
+                    echo "&nbsp;id:&nbsp;" . $value['id'] . "&nbsp;name:&nbsp;" . $value['name'] . "&nbsp;quantity:&nbsp;" . $value['quantity'] . "&nbsp;description:&nbsp;" . $value['description'] . "&nbsp;created:&nbsp;" . $value['created'] . "<br>";
                 }; ?>
 
                 <h4>Company Info</h4>

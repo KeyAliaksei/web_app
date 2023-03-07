@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const currentForm = e.currentTarget;
-        console.log('Form submited');
+        console.log('Form submitted');
 
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "/web_app/registration/register");
@@ -12,9 +12,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
-                console.log(xhr.status);
-                console.log(xhr.responseText);
-                window.location.href="/web_app/account";
+                if (xhr.status == 200) {
+                    console.log(xhr.status);
+                    console.log(xhr.responseText);
+                    var answerJSON = xhr.responseText;
+                    var answer = JSON.parse(answerJSON);
+                    if (answer.error) {
+                        alert(answer.message);
+                    } else {
+                        window.location.href="/web_app/account";
+                    }
+                }
             }};
 
         let data = {

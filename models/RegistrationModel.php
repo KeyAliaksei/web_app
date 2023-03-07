@@ -24,4 +24,14 @@ class RegistrationModel extends Model {
                 return false;
             }
         }
+
+        public function checkExistedUser($regLogin, $regEmail) {
+            $sql = "SELECT * FROM user WHERE login = :login AND email = :email";
+
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindValue(":login", $regLogin, PDO::PARAM_STR);
+            $stmt->bindValue(":email", $regEmail, PDO::PARAM_STR);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
 }
