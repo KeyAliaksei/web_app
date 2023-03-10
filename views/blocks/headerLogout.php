@@ -4,6 +4,7 @@
             <img class="me-3" src="/web_app/images/logo.svg" alt="logo" width="80" height="70">
         </a>
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/account">Account</a>
             <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/account/logout">Log Out</a>
         </nav>
     </div>

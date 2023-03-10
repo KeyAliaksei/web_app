@@ -26,7 +26,7 @@ class RegistrationModel extends Model {
         }
 
         public function checkExistedUser($regLogin, $regEmail) {
-            $sql = "SELECT * FROM user WHERE login = :login AND email = :email";
+            $sql = "SELECT * FROM user WHERE login = :login OR email = :email";
 
             $stmt = $this->db->prepare($sql);
             $stmt->bindValue(":login", $regLogin, PDO::PARAM_STR);

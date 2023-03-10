@@ -8,6 +8,7 @@
                 <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/login">Login</a>
                 <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/registration">Sign up</a>
             <?php } else { ?>
+                <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/account">Account</a>
                 <a class="me-3 py-2 text-light text-decoration-none" href="/web_app/account/logout">Log Out</a>
             <?php } ?>
         </nav>
