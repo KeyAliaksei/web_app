@@ -41,15 +41,113 @@
                                 Company info
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="/web_app/images/personal_info.svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></img>
+                                Personal info
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
+                    <h1 class="h2">
+                        Dashboard: <?= ucfirst($_SESSION['user']); ?>,
+                        <?php foreach ($pageData['companyInfo'] as $key => $value){
+                            echo $value['name'];
+                        } ?>
+                    </h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl">
+                        <div class="card">
+                            <div class="card-body bg-danger">
+                                <div class="row align-items-center gx-0">
+                                    <div class="col">
+                                        <!-- Title -->
+                                        <h6 class="text-uppercase text-light mb-2">
+                                            Amount of orders
+                                        </h6>
+                                        <!-- Heading -->
+                                        <span class="h2 mb-0">
+                                            <?= $pageData['ordersCount']; ?>
+                                        </span>
+                                    </div>
+                                </div> <!-- / .row -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl">
+                        <div class="card">
+                            <div class="card-body bg-success">
+                                <div class="row align-items-center gx-0">
+                                    <div class="col">
+                                        <!-- Title -->
+                                        <h6 class="text-uppercase text-light mb-2">
+                                            Sum of all active orders, €
+                                        </h6>
+                                        <!-- Heading -->
+                                        <span class="h2 mb-0">
+                                            €24,500
+                                        </span>
+                                    </div>
+                                </div> <!-- / .row -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl">
+                        <div class="card">
+                            <div class="card-body bg-warning">
+                                <div class="row align-items-center gx-0">
+                                    <div class="col">
+                                        <!-- Title -->
+                                        <h6 class="text-uppercase text-light mb-2">
+                                            Amount of products
+                                        </h6>
+                                        <!-- Heading -->
+                                        <span class="h2 mb-0">
+                                            <?= $pageData['productsCount']; ?>
+                                        </span>
+                                    </div>
+                                </div> <!-- / .row -->
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <table class="table mt-3 caption-top table-bordered table-info">
+                    <caption class="text-dark"><h4>Your orders</h4></caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry the Bird</td>
+                        <td>Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
 
                 <h4>Orders</h4>
                 <?php foreach ($pageData['orders'] as $key => $value) {
@@ -58,7 +156,7 @@
 
                 <h4>Products</h4>
                 <?php foreach ($pageData['products'] as $key => $value) {
-                    echo "&nbsp;id:&nbsp;" . $value['id'] . "&nbsp;name:&nbsp;" . $value['name'] . "&nbsp;quantity:&nbsp;" . $value['quantity'] . "&nbsp;description:&nbsp;" . $value['description'] . "&nbsp;created:&nbsp;" . $value['created'] . "<br>";
+                    echo "&nbsp;id:&nbsp;" . $value['id'] . "&nbsp;name:&nbsp;" . $value['name'] . "&nbsp;amount:&nbsp;" . $value['amount'] . "&nbsp;description:&nbsp;" . $value['description'] . "&nbsp;created:&nbsp;" . $value['created'] . "<br>";
                 }; ?>
 
                 <h4>Company Info</h4>
@@ -66,7 +164,7 @@
                     echo "&nbsp;id:&nbsp;" . $value['id'] . "&nbsp;company:&nbsp;" . $value['name'] . "&nbsp;address:&nbsp;" . $value['address'] . "&nbsp;phone:&nbsp;" . $value['phone'] . "&nbsp;email:&nbsp;" . $value['email'] . "<br>";
                 }; ?>
                 <div class="my-3 p-3 bg-body rounded shadow-sm justify-content-center">
-                    <?php require "blocks/requestOrderForm.php" ?>
+                    <?php require "blocks/addNewProductForm.php" ?>
                 </div>
             </main>
         </div>

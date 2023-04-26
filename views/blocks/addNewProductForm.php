@@ -2,7 +2,7 @@
     <div class="row bg-white">
         <div class="col rounded p-4">
 
-            <h3 class="text-center mb-4">Request order</h3>
+            <h3 class="text-center mb-4">Add product</h3>
 
             <form method="post" id="requestOrderForm" name="requestOrderForm" enctype="multipart/form-data">
 
@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="inputNumber">Quantity</label>
+                    <label for="inputNumber">Amount</label>
                     <input type="text" class="form-control" id="inputNumber" required>
                 </div>
 
@@ -26,7 +26,7 @@
                     <input type="file" class="form-control-file" id="file">
                 </div>
 
-                <button type="submit" class="btn btn-danger w-100 mt-2">Send request</button>
+                <button type="submit" class="btn btn-danger w-100 mt-2">Add new product</button>
 
             </form>
         </div>

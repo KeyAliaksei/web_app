@@ -22,8 +22,14 @@ class AccountController extends Controller {
         $orders = $this->model->getOrders();
         $this->pageData['orders'] = $orders;
 
+        $ordersCount = $this->model->getOrdersCount();
+        $this->pageData['ordersCount'] = $ordersCount;
+
         $products = $this->model->getProducts();
         $this->pageData['products'] = $products;
+
+        $productsCount = $this->model->getProductsCount();
+        $this->pageData['productsCount'] = $productsCount;
 
         $companyInfo = $this->model->getCompanyInfo();
         $this->pageData['companyInfo'] = $companyInfo;

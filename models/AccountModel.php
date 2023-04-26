@@ -14,6 +14,14 @@ class AccountModel extends Model {
         return $result;
     }
 
+    public function getOrdersCount(){
+        $sql = "SELECT COUNT(*) FROM orders";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchColumn();
+        return $result;
+    }
+
     public function getProducts(){
         $sql = "SELECT * FROM products";
         $result = array();
@@ -23,6 +31,14 @@ class AccountModel extends Model {
             $result[$row['id']] = $row;
         }
 
+        return $result;
+    }
+
+    public function getProductsCount(){
+        $sql = "SELECT COUNT(*) FROM products";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchColumn();
         return $result;
     }
 
